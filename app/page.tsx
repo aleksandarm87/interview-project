@@ -70,7 +70,7 @@ export default function Home() {
       const data = await response.json();
 
       if (data.success) {
-        setUploadedImageUrl(data.imagePath);
+        setUploadedImageUrl(`/api/images/${data.imageName }`);
       }
     } catch (error) {
       console.error("Error:", error);

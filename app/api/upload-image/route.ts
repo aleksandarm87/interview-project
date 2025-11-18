@@ -41,7 +41,7 @@ export async function POST(request: Request) {
     // Return the path to the uploaded image
     return NextResponse.json({ 
       success: true, 
-      imagePath: `/uploads/${fileName}` 
+      imageName: fileName 
     });
   } catch (error) {
     console.error('Error uploading image:', error);
